@@ -1,0 +1,34 @@
+Instalacion de python + dependencias:
+
+Instalo python descargando el paquete y lo instalo marcando la casilla de que se aplique en el PATH para poder abrirlo de la terminal.
+
+
+Instalo virtualenv para el entorno virtual.
+## -pip install virtualenv
+
+para ver que qe paquetes hay dentro del entorno creado hago lo siguiente:
+## pip list
+
+
+Creo el entorno virtual:
+##  virtualenv -p python3 env
+
+Activo el entorno virtual:
+## .\env\Scripts\activate
+----¡¡PROBLEMA!!----
+No tengo los permisos para activar el entorno virtual
+para habilitarlos abrimos powershell (con permisos de admin) y usamos el siguiente comando para verificar que esta restringido
+## Get-ExecutionPolicy
+
+Para habilitar los scripts locales usamos el siguiente comando
+## Set-ExecutionPolicy RemoteSigned
+Seguidamente le decimos que "Si" para habilitarlo.
+
+Ahora comprobamos en la terminal la ejecucion del script para la activación.
+## .\env\Scripts\activate
+YA FUNCIONA
+
+
+para desactivar el entorno virtual simplemente hay que usar el comando 
+## deactivate
+Desde cualquier carpeta ya que al estar dentro del entorno virtualenv detecta el comando

@@ -1,0 +1,35 @@
+estando dentro del entorno virtual vamos a instalar django 
+## pip install django
+
+para ver la versión:
+## django-admin --version
+
+
+
+crear proyecto:
+## django-admin startproject (nombre del proyecto) 
+importante en el nombre del proyecto no puede contener lo siguiente:
+django, python, test, etc. 
+
+Si lo hacemos de esta manera, se va a crearuna carpeta con el nombre del proyecto y
+dentro de esta misma carpeta tendra otra carpeta con el mismo nombre.
+Como yo quiero que se ponga todo en la carpeta raiz, vamos a ponerle un punto al final.
+## django-admin startproject (nombre del proyecto) .
+
+
+
+ARCHIVO manage.py
+Este archivo sirve para poder ejecutar algunos comandos de administracion del proyecto
+
+Para ejecutar el proyecto usaremos lo siguiente
+## python manage.py runserver
+
+ver los comandos que podemos usar:
+## python manage.py --help
+
+
+Dentro del proyecto podemos crear diferentes aplicaciones para separar funcionalidades del sitio web.
+Creamos asi las app:
+## python manage.py startapp
+
+para acoplar estas app al proyecto principal, hay que incorporarlo en la carpeta del proyecto principal (nombre del proyecto)

@@ -1,0 +1,39 @@
+En este archivo explico como funcionan los archivos de las aplicaciones de django
+
+
+## views.py
+
+este es el archivo "principal".
+Es lo que se va a poder mostrar en el navegador.
+
+
+## __init__.py
+
+sirve para que la carpeta inicial de la aplicacion sea considerada un modulo de python.
+
+
+## carpeta migrations
+
+esta carpeta se va a llenar cuando estemos modificando la base de datos.
+Se va a generar codigo para modificar la base de datos
+
+
+
+## admin.py
+
+archivo de configuración del panel de control
+
+
+## apps.py
+
+seria el archivo de configuracion de la app
+
+
+## models.py
+
+Donde crearemos clases para convertirlas en tablas de sql
+
+
+## test.py
+
+para que podamos escribir testing de nuestras vistas que se envian al navegador y poder comprobar logica
