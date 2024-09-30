@@ -1,8 +1,0 @@
-El archgivo que se genera automaticamente cuando ejecutamos el proyecto ejecutamos
-## db.sqlite3
-
-Podemos abrir este archivo con un programa ligero llamado db browser for sqlite
-https://sqlitebrowser.org/dl/
-
-Seleccionamos la opcion de abrir database y elegimos el archivo db.sqlie3
-

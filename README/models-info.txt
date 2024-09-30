@@ -1,0 +1,17 @@
+Este archivo es fundamental para la gestion de los datos.
+Aqui es donde se crearan las tablas mediante las migraciones 
+y tambien se gestionaran las transacciones de datos.
+
+Desde aqui tambien es posible gestionar la interaccion de la api con la base de datos
+
+
+
+
+Cuando creas una clase en este archivo, estas creando una tabla.
+Dentro de esta tabla puedes definir las columnas con sus respectivos tipos.
+Pueden ser texteos, numeros, tambien puedes relacionar tablas utilizando foreingkeys.
+
+No hay que preocuparse por las claves primarias ya que django por defecto crea id que son primarias.
+
+
+ 

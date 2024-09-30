@@ -1,0 +1,54 @@
+El archgivo que se genera automaticamente cuando ejecutamos el proyecto ejecutamos
+## db.sqlite3
+
+Podemos abrir este archivo con un programa ligero llamado db browser for sqlite
+https://sqlitebrowser.org/dl/
+
+Seleccionamos la opcion de abrir database y elegimos el archivo db.sqlie3
+Se abrirà la base de datos y podremos ver que no existen tablas, vistas, triggers, etc.
+
+Como podemos crearlas?
+
+Muy sencillo. Django lo genera solo utilizando dos comandos.
+
+## python manage.py makemigrations
+Este comando crea los archivos de migración basados en los cambios que has realizado en tus modelos.
+
+## python manage.py migrate
+Aplica los cambios de estructura que tienen que haber en la base de datos
+
+
+
+Crear registros en la base de datos desde la consola:
+Abrimos la consola:
+## python manage.py shell
+
+importamos las los modelos que tengamos hechos. En este caso Project y Tasks
+## from myapp.models import Project, Tasks
+
+Para crear, utilizaremos:
+## p = Project(name = "nombre del proyecto")
+
+y aplicaremos ejecutando la variable:
+## p.save()
+
+para ver si se ha creado correctamente:
+## p
+
+
+para ver cuantos proyectos hay creado, usaremos:
+## Project.objects.all()
+Saldra un array con los proyectos y sus respectivos id's
+
+
+Como los dos modelos estan relacionados (tasks tiene una foreignkey)
+puedo relacionar un proyecto con una tarea utilizando:
+## p = Project.objects.get(id=1)
+(selecciono el proyecto y lo pongo en una variable)
+
+guardo en la tabla tasks la tarea con el titulo que quiero y relacionada gracias a la variable "p"
+## p.tasks_set.create(title="descargar IDE")
+
+
+Para filtrar dentro de las tablas podemos hacer:
+## Project.objects.filter(name__startswith="(lo que queramos)")
